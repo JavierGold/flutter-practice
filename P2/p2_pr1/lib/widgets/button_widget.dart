@@ -47,6 +47,23 @@ class ButtonWidget extends StatelessWidget {
                   : Global.colorEmpresa,
           borderRadius: BorderRadius.circular(4.0),
         ),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(4.0),
+          onTap: onPressed,
+          child: SizedBox(
+            height: height,
+            width: width! < 0 ? MediaQuery.of(context).size.width : width!,
+            child: Center(
+              child: Text(
+                title!,
+                style: TextStyle(
+                    color: hasBorder! ? Global.colorNegro : Global.colorBlanco,
+                    fontWeight: FontWeight.w400,
+                    fontSize: fontSizeButton),
+              ),
+            ),
+          ),
+        ),
       ),
     );
   }
