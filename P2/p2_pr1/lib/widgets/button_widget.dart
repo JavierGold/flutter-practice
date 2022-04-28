@@ -36,6 +36,18 @@ class ButtonWidget extends StatelessWidget {
       fontSizeButton = fontSize ?? 14;
     }
 
-    return Container();
+    return Material(
+      borderRadius: BorderRadius.circular(4.0),
+      child: Ink(
+        decoration: BoxDecoration(
+          color: hasBorder!
+              ? Global.colorBlanco
+              : otherColor!
+                  ? colorButton
+                  : Global.colorEmpresa,
+          borderRadius: BorderRadius.circular(4.0),
+        ),
+      ),
+    );
   }
 }

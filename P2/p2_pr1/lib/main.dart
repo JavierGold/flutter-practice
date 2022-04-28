@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
           body: Center(
             child: ButtonWidget(
               title: 'Button',
+              hasBorder: false,
               onPressed: () {
                 print('Button pressed');
               },
